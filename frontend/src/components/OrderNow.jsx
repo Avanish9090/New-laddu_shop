@@ -54,7 +54,7 @@ function OrderNow() {
     // console.log(orderData);
 
     try {
-      axios.post("http://localhost:8000/order", orderData);
+      axios.post("https://new-laddu-shop-backend.onrender.com/order", orderData);
       Swal.fire({
         title: "Thanks for Order 😊! we will contact You",
         icon: "success",

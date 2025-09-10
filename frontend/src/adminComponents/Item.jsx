@@ -8,7 +8,7 @@ function Item() {
 
   const getItems = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/items");
+      const res = await axios.get("https://new-laddu-shop-backend.onrender.com/items");
       const data = res.data.items;
       setItems(data);
     } catch (err) {
@@ -84,7 +84,7 @@ function Item() {
                             }).then((result) => {
                               if (result.isConfirmed) {
                                 axios.delete(
-                                  `http://localhost:8000/delete/${item._id}`
+                                  `https://new-laddu-shop-backend.onrender.com/delete/${item._id}`
                                 );
 
                                 Swal.fire({

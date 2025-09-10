@@ -7,7 +7,7 @@ function Contacts() {
   const [conts, setConts] = useState([]);
 
   const getAllCdata = async () => {
-    const Cdata = await axios.get("http://localhost:8000/all-contacts");
+    const Cdata = await axios.get("https://new-laddu-shop-backend.onrender.com/all-contacts");
     setConts(Cdata.data.allCdata);
   };
 
@@ -64,7 +64,7 @@ function Contacts() {
                         <button
                           onClick={() => {
                             axios.delete(
-                              `http://localhost:8000/delete-contacts/${item._id}`
+                              `https://new-laddu-shop-backend.onrender.com/delete-contacts/${item._id}`
                             );
                             getAllCdata();
                             toast.success("Deleted successfully");

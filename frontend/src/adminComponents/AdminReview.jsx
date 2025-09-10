@@ -10,7 +10,7 @@ function AdminReview() {
 
   const getReviews = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/all-reviews");
+      const res = await axios.get("https://new-laddu-shop-backend.onrender.com/all-reviews");
       setRdata(res.data.allReviews);
     } catch (err) {
       console.log(err);
@@ -76,7 +76,7 @@ function AdminReview() {
                               }).then((result) => {
                                 if (result.isConfirmed) {
                                   axios.delete(
-                                    `http://localhost:8000/delete-review/${item._id}`
+                                    `https://new-laddu-shop-backend.onrender.com/delete-review/${item._id}`
                                   );
 
                                   Swal.fire({

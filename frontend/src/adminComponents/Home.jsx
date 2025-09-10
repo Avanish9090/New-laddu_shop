@@ -38,7 +38,7 @@ function Home() {
     data.append("price", formdata.price);
 
     try {
-      axios.post("http://localhost:8000/upload", data);
+      axios.post("https://new-laddu-shop-backend.onrender.com/upload", data);
       toast.success("Successfully uploaded!");
     } catch (err) {
       console.log(err);

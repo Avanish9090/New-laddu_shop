@@ -44,7 +44,7 @@ function Contact() {
       return;
     }
 
-    axios.post("http://localhost:8000/contacts", concData);
+    axios.post("https://new-laddu-shop-backend.onrender.com/contacts", concData);
     setMsg1("Message send successfully !");
 
     setConcdata({

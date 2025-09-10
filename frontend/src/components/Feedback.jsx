@@ -37,7 +37,7 @@ function Feedback() {
       return;
     }
     try {
-      axios.post("http://localhost:8000/review", fData);
+      axios.post("https://new-laddu-shop-backend.onrender.com/review", fData);
       setMsg1("Submitted Thanks! For review 😊");
       setFdata({
         name: "",

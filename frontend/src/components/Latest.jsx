@@ -11,7 +11,7 @@ function Latest() {
   useEffect(() => {
     const getLatest = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/items");
+        const res = await axios.get("https://new-laddu-shop-backend.onrender.com/items");
         const data = res.data.items;
         setlatest(data);
       } catch (err) {

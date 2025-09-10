@@ -12,7 +12,7 @@ function Review() {
   useEffect(() => {
     const getReviews = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/all-reviews");
+        const res = await axios.get("https://new-laddu-shop-backend.onrender.com/all-reviews");
         setRdata(res.data.allReviews);
       } catch (err) {
         console.log(err);

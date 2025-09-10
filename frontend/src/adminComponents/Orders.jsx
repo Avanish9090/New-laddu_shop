@@ -10,7 +10,7 @@ function Orders() {
 
   const getAllOrders = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/orders");
+      const res = await axios.get("https://new-laddu-shop-backend.onrender.com/orders");
       const data = res.data.AllOrders;
       setallOrders(data);
     } catch (err) {
@@ -81,7 +81,7 @@ function Orders() {
                               }).then((result) => {
                                 if (result.isConfirmed) {
                                   axios.delete(
-                                    `http://localhost:8000/order/delete/${item._id}`
+                                    `https://new-laddu-shop-backend.onrender.com/order/delete/${item._id}`
                                   );
 
                                   Swal.fire({

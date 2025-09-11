@@ -34,7 +34,7 @@ function Story() {
       <div className="hero bg-base-200 pt-10">
         <div className="hero-content flex-col lg:flex-row">
           <img
-            src="../../public/images/story-1.jpeg"
+            src="/images/story-1.jpeg"
             className="max-w-sm rounded-lg shadow-2xl md:h-80 md:w-250"
           />
 
@@ -60,7 +60,7 @@ function Story() {
       <div className="hero bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
           <img
-            src="../../public/images/story2.jpeg"
+            src="/images/story2.jpeg"
             className="max-w-sm rounded-lg shadow-2xl md:h-80 md:w-250"
           />
           <div>
@@ -80,7 +80,7 @@ function Story() {
       <div className="hero bg-base-200 pt-10 ">
         <div className="hero-content flex-col lg:flex-row">
           <img
-            src="../../public/images/story-1.jpeg"
+            src="/images/story-1.jpeg"
             className="max-w-sm rounded-lg shadow-2xl md:h-80 md:w-250"
           />
 

@@ -4,7 +4,7 @@ function ReviewCard({ item }) {
   return (
     <>
       <div className=" m-4">
-        <div className="card card-border bg-base-100 w-96 shadow-2xl hover:scale-105 duration-200 ">
+        <div className="card card-border bg-base-100 w-80 shadow-2xl hover:scale-105 duration-200 ">
           <div className="card-body">
             <div className="rating">
               <div className="mask mask-star" aria-label="1 star"></div>

@@ -11,9 +11,9 @@ function Hero() {
               "url(https://png.pngtree.com/thumb_back/fh260/background/20240716/pngtree-3d-indian-sweets-called-laddoo-in-plate-for-diwali-festival-image_16010785.jpg)",
           }}
         >
-          <div className="hero-overlay"></div>
-          <div className="hero-content text-neutral-content text-center">
-            <div classname="mt-25">
+       
+          <div className="hero-content text-neutral-content text-center mt-30">
+            <div>
               {/* <h1 className="mb-5 text-5xl font-bold">Hello there</h1> */}
               <h1 className="md:text-8xl text-6xl font-extrabold">
                 Experience the Authentic

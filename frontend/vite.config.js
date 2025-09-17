@@ -8,16 +8,6 @@ export default defineConfig({
     extend: {},
   },
   plugins: [react(),tailwindcss()],
-  safelist: [
-    "slick-slider",
-    "slick-track",
-    "slick-slide",
-    "slick-list",
-    "slick-arrow",
-    "slick-prev",
-    "slick-next",
-    "slick-dots",
-  ],
    daisyui: {
     themes: ["light", "dark"], // you can limit to just "light" if you want
   },

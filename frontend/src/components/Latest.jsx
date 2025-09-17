@@ -71,7 +71,7 @@ function Latest() {
         <h1 className="text-4xl text-center font-black my-3">
           Latest <span className="text-orange-400">Sweets</span> !!
         </h1>
-        <div className="my-10">
+        <div className="my-10 bg-white rounded-lg shadow-md p-4 w-full h-full">
           <Slider {...settings}>
             {latest.map((item) => (
               <Card item={item} key={item.id} />

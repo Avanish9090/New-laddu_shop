@@ -1,3 +1,4 @@
+import React from "react";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Slider from "react-slick";
@@ -19,39 +20,40 @@ function Latest() {
     getLatest();
   }, []);
 
-  var settings = {
-  dots: true,
-  infinite: false,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1280,
-      settings: {
-        slidesToShow: 3,
+var settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
       },
-    },
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
       },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-      },
-    },
-  ],
-};
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
   return (
     <>
@@ -59,7 +61,7 @@ function Latest() {
         <h1 className="text-4xl text-center font-black my-3">
           Latest <span className="text-orange-400">Sweets</span> !!
         </h1>
-        <div className="my-10 ">
+        <div className="my-10  slider-container">
           <Slider {...settings}>
             {latest.map((item) => (
              <Card item={item} key={item.id} />      

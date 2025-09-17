@@ -13,7 +13,7 @@ function Hero() {
         >
           <div className="hero-overlay"></div>
           <div className="hero-content text-neutral-content text-center">
-            <div>
+            <div classname="mt-25">
               {/* <h1 className="mb-5 text-5xl font-bold">Hello there</h1> */}
               <h1 className="md:text-8xl text-6xl font-extrabold">
                 Experience the Authentic

@@ -67,7 +67,7 @@ function Latest() {
 
   return (
     <>
-      <div className="border border-gray-400 rounded shadow-lg   bg-white my-10 p-2 md:mx-3">
+      <div className="border border-gray-400 rounded shadow-lg  overflow-hidden bg-white my-10 p-2 mx-auto">
         <h1 className="text-4xl text-center font-black my-3">
           Latest <span className="text-orange-400">Sweets</span> !!
         </h1>

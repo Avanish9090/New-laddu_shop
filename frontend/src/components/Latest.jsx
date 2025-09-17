@@ -67,14 +67,17 @@ function Latest() {
 
   return (
     <>
-      <div className="border border-gray-400 rounded shadow-lg  overflow-hidden bg-white my-10 p-2 mx-auto">
+      <div className="border border-gray-400 rounded shadow-lg  bg-white my-10 p-2 mx-auto">
         <h1 className="text-4xl text-center font-black my-3">
           Latest <span className="text-orange-400">Sweets</span> !!
         </h1>
-        <div className="my-10 bg-white rounded-lg shadow-md p-4 w-full h-full">
+        <div className="my-10 w-full overflow-x-hidden">
           <Slider {...settings}>
             {latest.map((item) => (
-              <Card item={item} key={item.id} />
+       <div className="bg-white rounded-lg shadow-md p-4 w-full h-full">
+        <Card item={item} key={item.id} />
+      </div>
+             
             ))}
           </Slider>
         </div>

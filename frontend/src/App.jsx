@@ -9,8 +9,6 @@ import AdminReview from "./adminComponents/AdminReview";
 import Story from "./components/Story";
 import Contact from "./components/Contact";
 import Contacts from "./adminComponents/Contacts";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (

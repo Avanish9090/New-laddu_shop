@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import ReviewCard from "./ReviewCard";
 import Feedback from "./Feedback";
 import axios from "axios";
+import ResponsiveSlides from "../hooks/useResponsiveSlides";
 
 function Review() {
   const [Rdata, setRdata] = useState([]);
+   const responsive = ResponsiveSlides();
 
   useEffect(() => {
     const getReviews = async () => {
@@ -21,48 +21,17 @@ function Review() {
     getReviews();
   }, []);
 
-  var settings = {
+   var settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1600,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    slidesToShow: responsive,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: true,
+  };
+  
   };
   return (
     <>

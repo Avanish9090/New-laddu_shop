@@ -8,6 +8,17 @@ function Latest() {
   const [latest, setlatest] = useState([]);
   const slideResponsive = Responsive();
 
+   var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: slideResponsive,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: true,
+  };
+
   useEffect(() => {
     const getLatest = async () => {
       try {
@@ -20,17 +31,6 @@ function Latest() {
     };
     getLatest();
   }, []);
-
- var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: slideResponsive,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: true,
-  };
   };
 
   return (

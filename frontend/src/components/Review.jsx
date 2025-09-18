@@ -9,18 +9,6 @@ function Review() {
   const [Rdata, setRdata] = useState([]);
    const responsive = ResponsiveSlides();
 
-  useEffect(() => {
-    const getReviews = async () => {
-      try {
-        const res = await axios.get("https://new-laddu-shop-backend.onrender.com/all-reviews");
-        setRdata(res.data.allReviews);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getReviews();
-  }, []);
-
    var settings = {
     dots: true,
     infinite: true,
@@ -31,8 +19,18 @@ function Review() {
     autoplaySpeed: 2000,
     arrows: true,
   };
-  
-  };
+
+  useEffect(() => {
+    const getReviews = async () => {
+      try {
+        const res = await axios.get("https://new-laddu-shop-backend.onrender.com/all-reviews");
+        setRdata(res.data.allReviews);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getReviews();
+  }, []);  
   return (
     <>
       <div className="border border-gray-400 rounded shadow-lg  bg-white  my-3 p-2 md:mx-3">

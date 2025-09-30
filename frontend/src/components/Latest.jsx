@@ -7,6 +7,7 @@ import Responsive from "../hooks/useResponsiveSlides";
 function Latest() {
   const [latest, setlatest] = useState([]);
   const slideResponsive = Responsive();
+  const [loading , setLoading] = useState(true);
 
    var settings = {
     dots: true,
@@ -27,6 +28,8 @@ function Latest() {
         setlatest(data);
       } catch (err) {
         console.log(err);
+      } finally{
+        setLoading(false);
       }
     };
     getLatest();
@@ -39,11 +42,16 @@ function Latest() {
           Latest <span className="text-orange-400">Sweets</span> !!
         </h1>
         <div className="my-10  slider-container">
-          <Slider {...settings}>
+          {
+            loading ? ( <p className="text-center font-semibold text-xl">Loading...</p>) : (
+               <Slider {...settings}>
             {latest.map((item) => (
              <Card item={item} key={item.id} />      
             ))}
           </Slider>
+            )
+          }
+         
         </div>
       </div>
     </>
